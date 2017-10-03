@@ -12,6 +12,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 </typeAliases> -->
 <settings>
 	<setting name="logImpl" value="log4j2"/>
+	<setting name="lazyLoadingEnabled" value="false"/>
 </settings>
 <typeAliases>
 	<package name="com.bcubbo.pojo"/>
