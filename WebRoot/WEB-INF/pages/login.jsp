@@ -7,7 +7,7 @@
 <title>登陆</title>
 </head>
 <body style="background-color:grey">
-<form>
+<form action="login.html" method="post">
 	<table>
 		<tr align="left">
 			<td>登陆名称:</td>
