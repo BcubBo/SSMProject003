@@ -7,22 +7,19 @@
 		id="WebApp_ID" 
 		version="3.0">
   <display-name>SSMProject003</display-name>
-  <!-- 必配置监听器 -->
-  <listener>
-  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-  <!-- spring加载log4j监听器 -->
-  <listener>
-  	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-  </listener>
-  <context-param>
+   <context-param>
   	<param-name>contextConfigLocation</param-name>
-  	<param-value>classpath:application-*.xml</param-value>
+  	<param-value>classpath:applicationContext-*.xml</param-value>
   </context-param>
   <context-param>
   	<param-name>log4ConfigLocation</param-name>
   	<param-value>classpath:log4j2.xml</param-value>
   </context-param>
+  <!-- spring加载log4j监听器 -->
+  <listener>
+  	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+
   <filter>
   	<filter-name>encodingFilter</filter-name>
   	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -43,7 +40,7 @@
   	<servlet-name>spring</servlet-name> 
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   	<init-param>
-  		<param-name>configLocation</param-name>
+  		<param-name>contextConfigLocation</param-name>
   		<param-value>classpath:spring-servlet.xml</param-value>
   	</init-param>
   	<load-on-startup>1</load-on-startup>
@@ -52,21 +49,11 @@
   	<servlet-name>spring</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
- 
-  
-  
-  
-  
-  
-  
-  
-  
+    <!-- 必配置监听器 -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
