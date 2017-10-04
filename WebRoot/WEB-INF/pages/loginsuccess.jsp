@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>索引</title>
+<title>登陆成功</title>
 </head>
 <body style="background-color:lightgrey">
-<h1>索引页面</h1>
-	<a href="login.html" style="text-decoration: none" >登录页面</a>
-	<a href="register.html" style="text-decoration:none" >注册页面</a>
-	<a href="exit.html" style="text-decoration:none" >退出页面</a>
+欢迎:${user.userName }!<br/>
+<hr/>
 </body>
 </html>
