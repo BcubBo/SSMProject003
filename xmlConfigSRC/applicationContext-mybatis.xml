@@ -38,7 +38,7 @@
 		<!-- <property name="mapperLocations" value="com/bcubbo/dao/*.xml"/> -->
 	</bean>
 	<!-- 使用MapperScannerConfigurer扫描映射器所在的包下的接口并实现,dao配置 -->
-	<bean id="employeeMapper" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.bcubbo.dao"/>
 	</bean>
 	
