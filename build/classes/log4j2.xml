@@ -16,13 +16,14 @@
     </Appenders>
     <Loggers>
         <Logger name="com.opensymphony.xwork2" level="DEBUG">
-        	<AppenderRef ref="mylog"/>
+        	<AppenderRef ref="STDOUT"/>
         </Logger>     
        	<Logger name="com.bcubbo.controller.IndexController">
        		<AppenderRef ref="mylog"/>
        	</Logger>
         <Root level="DEBUG">
             <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="mylog"/>
         </Root>
         
     </Loggers>
