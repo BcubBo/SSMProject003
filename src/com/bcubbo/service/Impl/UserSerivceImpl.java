@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bcubbo.dao.UserMapper;
@@ -12,7 +13,7 @@ import com.bcubbo.service.UserService;
 @Service
 public class UserSerivceImpl implements UserService {
 	
-	@Resource
+	@Autowired
 	private UserMapper userMapper;
 	
 	@Override
